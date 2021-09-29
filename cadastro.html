@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>.:Formulário:.</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form.css">
+    <meta name="viewport" content="width=device-with, inicial-scale=1.0">
+</head>
+
+<body>
+    <div id="cabecalho>
+        <div id=" cabecalho">
+        <h1>Formação Tech - Gama Academy - Formulário</h1>
+    </div>
+
+    <form action="contato.php" method="POST">
+
+        <fieldset>    
+            <fieldset id="usuario"><legend>Cadastro Pessoal:</legend>
+                <label for="cnome">Nome.:</label>
+                <input type="text"onblur="mascaraNome(this)"id="tnome"size="80" maxlength="30" placeholder="Nome Completo" value />
+            </fieldset>      
+
+            <fieldset id="documento"><legend>Documentos:</legend>
+                <label for="cCPF">CPF.:</label>
+                <input type="text" onblur="mascaraCpf(this)" placeholder="Insira seu CPF" pattern="[0-9]">
+                <input id="btn-enviar" type="submit" value="enviar">
+                
+                <label for="cRg">RG.:</label>
+                <input type="text" onblur="mascaraRg(this)" id="tRG" size="11" maxlength="9" />
+                
+            </fieldset>  
+
+            <fieldset id="sexo"><legend>Sexo:</legend>
+                
+                <label class="chackbox">
+                <input type="radio" name="sexo" id="Sexo" value="masculino">M
+                <input type="radio" name="sexo" id="Sexo" value="Feminino">F
+                </label>
+            </fieldset>
+            
+            <fieldset id="endereco"><legend>Endereço</legend>
+                <label for="Logradouro">Logradouro</label>
+                <input type="text" onblur="mascaraEndereco(this)" id="tRua" id="cRua" size="80" maxlength="80" placeholder="Alameda, Avenida, Rua, Travessa" value />
+                
+                <label for="Cnumero">Número</label>
+                <input type="number" id="cNumero" min="0" max="9999"/>
+
+                <label for="complemento">Complemento:</label>
+                <input type="text" id="Complemento"size="80" maxlength="80"/> 
+                    
+                <label for="bairro">Bairro:</label>
+                <input type="text" id="Bairro"size="80" maxlength="80" />
+
+                <label for="Cidade">Cidade</label>
+                <input type="text" id="Cidade"size="80" maxlength="80" />
+
+                <label for="cEst">Estado:</label>
+                <select name="tEst" id="cEst">
+                <option value = "AC"> Acre </option>
+                <option value = "AL"> Alagoas </option>
+                <option value = "AP"> Amapá </option>
+                <option value = "AM"> Amazonas </option>
+                <option value = "BA"> Bahia </option>
+                <option value = "CE"> Ceará </option>
+                <option value = "DF"> Distrito Federal </option>
+                <option value = "ES"> Espírito Santo </option>
+                <option value = "GO"> Goiás </option>
+                <option value = "MA"> Maranhão </option>
+                <option value = "MT"> Mato Grosso </option>
+                <option value = "MS"> Mato Grosso do Sul </option>
+                <option value = "MG"> Minas Gerais </option>
+                <option value = "PA"> Pará </option>
+                <option value = "PB"> Paraíba </option>
+                <option value = "PR"> Paraná </option>
+                <option value = "PE"> Pernambuco </option>
+                <option value = "PI"> Piauí </option>
+                <option value = "RJ"> Rio de Janeiro </option>
+                <option value = "RN"> Rio Grande do Norte </option>
+                <option value = "RS"> Rio Grande do Sul </option>
+                <option value = "RO"> Rondônia </option>
+                <option value = "RR"> Roraima </option>
+                <option value = "SC"> Santa Catarina </option>
+                <option value = "SP"> São Paulo </option>
+                <option value = "SE"> Sergipe </option>
+                <option value = "TO"> Tocantins </option>
+            </select>
+            
+                <label for="cCep">Cep</label>
+                <input type="text" id="tCep" size="9" maxlength="9" />
+
+            </fieldset>   
+
+            <fieldset id="telefone"><legend>Telefones</legend>
+
+                <label for="cfixo">Telefone Fixo:</label>
+                <input type="text" onblur="mascaraDeTeste(this)"  id="tCel" size="10" maxlength="10" placeholder="(99)9999-9999" />
+
+                <label for="cCel">Telefone Celular</label>
+                <input type="text" onblur="mascaraDeTeste(this)"  id="tCel" size="11" maxlength="11" placeholder="(99)99999-9999" />
+            </fieldset> 
+            
+            <fieldset id="formulario"><legend>Formulário:</legend>
+                <input type="submit" value="Enviar Formulário"/>
+
+            </fieldset>
+        </fieldset>   
+       
+   
+    </form>
+
+
+<script>
+    var nome = window.prompt ('Qual é o seu nome?')
+    window.alert ('É um alegria te conhecer,'+  nome)
+
+    function mascaradetelefone (telefone){
+        const textoAtual = telefone.value;
+    }
+   
+  </script>
+ </body>
+</html>
