@@ -1,0 +1,39 @@
+main{
+    background-color: orange;
+}
+
+.nome{
+    width: 100%;
+    padding: 10px 18px;
+    margin:1px 2;
+    box-sizing: border-box;
+}
+
+.endereco{
+    width: 440px;
+    padding: 10px 18px;
+    margin:2px 2;
+    box-sizing: border-box;
+}
+.bairro{
+    width:240px;
+    padding: 8px 16px;
+    margin: 2px;
+    box-sizing: border-box;
+}
+.cidade{
+    width:340px;
+    padding: 10px 18px;
+    margin:1px 2;
+    box-sizing: border-box;
+}
+
+.form{
+    width: 90%;
+padding: 10px 18px;
+margin:1px 2;
+box-sizing: border-box;
+}
+
+
+
