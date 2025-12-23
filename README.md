@@ -1,3 +1,23 @@
+# Formulário Gama Academy
+
+Este projeto é um formulário de cadastro pessoal desenvolvido para o desafio da Formação Tech da Gama Academy.
+
+## Estrutura
+
+- `index.html` — Formulário principal
+- `style.css` — Estilos globais da página
+- `form.css` — Estilos específicos do formulário
+
+## Publicação
+
+Você pode publicar este projeto facilmente no [Netlify](https://www.netlify.com/) ou [GitHub Pages](https://pages.github.com/).
+
+## Validação
+
+O formulário possui validação HTML5 com destaque visual:
+- Campos obrigatórios em vermelho se estiverem incorretos
+- Campos válidos em verde
+
 # Gama Academy - Transformando Talentos para o Futuro
 
 #### Autores

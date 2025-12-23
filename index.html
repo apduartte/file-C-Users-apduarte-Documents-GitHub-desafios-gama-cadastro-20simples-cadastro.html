@@ -1,124 +1,96 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-    <meta charset="utf-8">
-    <title>.:Formulário:.</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="form.css">
-    <meta name="viewport" content="width=device-with, inicial-scale=1.0">
+  <meta charset="utf-8">
+  <title>Formulário | Gama Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS global -->
+  <link rel="stylesheet" href="style.css">
+  <!-- CSS do formulário -->
+  <link rel="stylesheet" href="form.css">
 </head>
-
 <body>
-    <div id="cabecalho>
-        <div id=" cabecalho" backgroud-color:"#ec7000">
-        <h1>Formação Tech - Gama Academy - Formulário</h1>
-    </div>
 
-    <form action="./form.css" method="POST">
+  <header class="cabecalho">
+    <h1>Formação Tech - Gama Academy - Formulário</h1>
+  </header>
 
-        <fieldset>    
-            <fieldset id="usuario"><legend>Cadastro Pessoal:</legend>
-                <label for="cnome">Nome.:</label>
-                <input type="text"onblur="mascaraNome(this)"id="tnome"size="80" maxlength="35" placeholder="Nome Completo" required value />
-            </fieldset>      
+  <main>
+    <form id="cadastro-pessoal" action="#" method="POST" class="form">
+      <fieldset>
+        <legend>Cadastro Pessoal</legend>
 
-            <fieldset id="documento"><legend>Documentos:</legend>
-                <label for="cCPF">CPF.:</label>
-                <input type="text" onblur="mascaraCpf(this)" placeholder="Insira seu CPF" required pattern="[0-9]">
-                                
-                <label for="cRg">RG.:</label>
-                <input type="text" onblur="mascaraRg(this)" id="tRG" required size="11" maxlength="9" />
-                
-            </fieldset>  
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" class="nome" required>
 
-            <fieldset id="sexo"><legend>Sexo:</legend>
-                
-                <label class="chackbox">
-                <input type="radio" name="sexo" id="Sexo" value="masculino">M
-                <input type="radio" name="sexo" id="Sexo" value="Feminino">F
-                </label>
-            </fieldset>
-            
-            <fieldset id="endereco"><legend>Endereço</legend>
-                <label for="Logradouro">Logradouro</label>
-                <input type="text" onblur="mascaraEndereco(this)" id="tRua" id="cRua" size="80" maxlength="80" placeholder="Alameda, Avenida, Rua, Travessa" required value />
-                
-                <label for="Cnumero">Número</label>
-                <input type="number" id="cNumero" min="0" max="9999"/>
+        <fieldset>
+          <legend>Documentos</legend>
+          <label for="cpf">CPF:</label>
+          <input type="text" id="cpf" name="cpf" class="cpf" required pattern="\d{11}" title="Digite 11 números">
 
-                <label for="complemento">Complemento:</label>
-                <input type="text" id="Complemento" required size="80" maxlength="80"/> 
-                    
-                <label for="bairro">Bairro:</label>
-                <input type="text" id="Bairro" required size="80" maxlength="80" />
+          <label for="rg">RG:</label>
+          <input type="text" id="rg" name="rg">
+        </fieldset>
 
-                <label for="Cidade">Cidade</label>
-                <input type="text" id="Cidade" required size="80" maxlength="80" />
+        <fieldset>
+          <legend>Sexo</legend>
+          <label><input type="radio" name="sexo" value="M"> Masculino</label>
+          <label><input type="radio" name="sexo" value="F"> Feminino</label>
+        </fieldset>
 
-                <label for="cEst">Estado:</label>
-                <select name="tEst" id="cEst">
-                <option value = "AC"> Acre </option>
-                <option value = "AL"> Alagoas </option>
-                <option value = "AP"> Amapá </option>
-                <option value = "AM"> Amazonas </option>
-                <option value = "BA"> Bahia </option>
-                <option value = "CE"> Ceará </option>
-                <option value = "DF"> Distrito Federal </option>
-                <option value = "ES"> Espírito Santo </option>
-                <option value = "GO"> Goiás </option>
-                <option value = "MA"> Maranhão </option>
-                <option value = "MT"> Mato Grosso </option>
-                <option value = "MS"> Mato Grosso do Sul </option>
-                <option value = "MG"> Minas Gerais </option>
-                <option value = "PA"> Pará </option>
-                <option value = "PB"> Paraíba </option>
-                <option value = "PR"> Paraná </option>
-                <option value = "PE"> Pernambuco </option>
-                <option value = "PI"> Piauí </option>
-                <option value = "RJ"> Rio de Janeiro </option>
-                <option value = "RN"> Rio Grande do Norte </option>
-                <option value = "RS"> Rio Grande do Sul </option>
-                <option value = "RO"> Rondônia </option>
-                <option value = "RR"> Roraima </option>
-                <option value = "SC"> Santa Catarina </option>
-                <option value = "SP"> São Paulo </option>
-                <option value = "SE"> Sergipe </option>
-                <option value = "TO"> Tocantins </option>
-            </select>
-            
-                <label for="cCep">Cep</label>
-                <input type="text" id="tCep" size="9" maxlength="9" />
+        <fieldset>
+          <legend>Endereço</legend>
+          <label for="logradouro">Logradouro:</label>
+          <input type="text" id="logradouro" name="logradouro" class="endereco" required>
 
-            </fieldset>   
+          <label for="numero">Número:</label>
+          <input type="number" id="numero" name="numero" required>
 
-            <fieldset id="telefone"><legend>Telefones</legend>
+          <label for="bairro">Bairro:</label>
+          <input type="text" id="bairro" name="bairro" class="bairro">
 
-                <label for="cfixo">Telefone Fixo:</label>
-                <input type="text" onblur="mascaraDeTeste(this)"  id="tCel" size="10" maxlength="10" placeholder="(99)9999-9999" />
+          <label for="cidade">Cidade:</label>
+          <input type="text" id="cidade" name="cidade" class="cidade">
 
-                <label for="cCel">Telefone Celular</label>
-                <input type="text" onblur="mascaraDeTeste(this)"  id="tCel" size="11" maxlength="11" placeholder="(99)99999-9999" />
-            </fieldset> 
-            
-            <fieldset id="formulario"><legend>Formulário:</legend>
-                <input type="submit" value="Enviar Formulário"/>
+          <label for="estado">Estado:</label>
+          <select id="estado" name="estado" required>
+            <option value="">-- Selecione --</option>
+            <option value="SP">São Paulo</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="RS">Rio Grande do Sul</option>
+          </select>
 
-            </fieldset>
-        </fieldset>   
-       
-   
+          <label for="cep">CEP:</label>
+          <input type="text" id="cep" name="cep" required pattern="\d{5}-\d{3}" title="Formato: 99999-999">
+        </fieldset>
+
+        <fieldset>
+          <legend>Telefones</legend>
+          <label for="telFixo">Telefone Fixo:</label>
+          <input type="tel" id="telFixo" name="telFixo" pattern="\(\d{2}\)\d{4}-\d{4}" title="(99)9999-9999">
+
+          <label for="telCelular">Telefone Celular:</label>
+          <input type="tel" id="telCelular" name="telCelular" required pattern="\(\d{2}\)\d{5}-\d{4}" title="(99)99999-9999">
+        </fieldset>
+
+        <button type="submit">Enviar Formulário</button>
+      </fieldset>
     </form>
+  </main>
 
-
-<script>
-    var nome = window.prompt ('Qual é o seu nome?')
-    window.alert ('É um alegria te conhecer,'+  nome)
-
-    function mascaradetelefone (telefone){
-        const textoAtual = telefone.value;
+  <script>
+    const nomePrompt = window.prompt('Qual é o seu nome?');
+    if (nomePrompt) {
+      window.alert('É uma alegria te conhecer, ' + nomePrompt);
     }
-   
+
+    const form = document.getElementById('cadastro-pessoal');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!form.reportValidity()) return;
+      window.alert('Cadastro realizado com sucesso!');
+    });
   </script>
- </body>
+</body>
 </html>

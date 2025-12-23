@@ -1,70 +1,22 @@
 @charset "utf-8";
-element.style {
-    background-position: auto;
-}
-. cabecalho {
-    margin: color: #ec7000;
-    height: 50px;
-    width:100%;
-    background-color: #ec7000;
-    padding: 10px 5rem;
-    color: #fff;
-    fonte-size: 12pt;
-    position: fixed;
-    z-index: 9999;
-
-}
 
 body {
-    background-color: whitesmoke;
-    margin:center;
-    padding: 12px 20px;
+  background-color: whitesmoke;
+  margin: 0;
+  padding: 12px 20px;
+  font-family: Arial, sans-serif;
 }
 
-.cabecalho{
-    background-color: orangered;
-margin: auto;
-padding: 12px 20px;
-width: 50%;
-background-color: blue;
+.cabecalho {
+  height: auto;
+  width: 100%;
+  background-color: #ec7000;
+  padding: 16px;
+  color: #fff;
+  font-size: 16pt;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  text-align: center;
 }
-
-.input [ type = tex]{
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing:content-box;
-    border: 2px;
-    border-radius: 4px;
-}
-
-.usuario{
-    size: 80px;
-
-}
-
-.cpf{
-    box-sizing: content-box;
-}    
-
-form{
-    margin: 40px;
-}
-
-form label{
-    display: block;
-    font-size: 20px;
-    margin: 0 0 10;
-}
-
-form input{
-    display: block;
-    margin: 0 0 20;
-    padding: auto;
-}
-
-
-
-
-
-

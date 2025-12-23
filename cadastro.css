@@ -1,39 +1,84 @@
-main{
-    background-color: orange;
+/* Fundo da página */
+main {
+  background-color: orange;
+  padding: 20px;
+  font-family: Arial, sans-serif;
 }
 
-.nome{
-    width: 100%;
-    padding: 10px 18px;
-    margin:1px 2;
-    box-sizing: border-box;
+/* Cabeçalho */
+#cabecalho {
+  background-color: #ec7000;
+  color: #fff;
+  padding: 16px;
+  text-align: center;
 }
 
-.endereco{
-    width: 440px;
-    padding: 10px 18px;
-    margin:2px 2;
-    box-sizing: border-box;
-}
-.bairro{
-    width:240px;
-    padding: 8px 16px;
-    margin: 2px;
-    box-sizing: border-box;
-}
-.cidade{
-    width:340px;
-    padding: 10px 18px;
-    margin:1px 2;
-    box-sizing: border-box;
+/* Estrutura do formulário */
+.form {
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
 }
 
-.form{
-    width: 90%;
-padding: 10px 18px;
-margin:1px 2;
-box-sizing: border-box;
+/* Labels */
+label {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
 }
 
+/* Inputs e selects */
+input, select, button {
+  width: 100%;
+  padding: 10px 14px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
 
+/* Campos específicos */
+.nome {
+  width: 100%;
+}
 
+.endereco {
+  width: 100%;
+}
+
+.bairro {
+  width: 60%;
+}
+
+.cidade {
+  width: 80%;
+}
+
+/* Botão */
+button {
+  background-color: #ec7000;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+button:hover {
+  background-color: #d95f00;
+}
+
+/* Destaque de erro */
+input:invalid, select:invalid {
+  border: 2px solid red;
+  background-color: #ffe6e6;
+}
+
+/* Destaque de sucesso */
+input:valid, select:valid {
+  border: 2px solid green;
+}
