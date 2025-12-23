@@ -34,3 +34,29 @@ Criar um formulario para registrar dados pessoais
 * Não usar frameworks de estilo como Bootstrap, Google Material e demais.
 * Os entregáveis descritos acima são requisitos básicos para apresentação no dia da entrevista, ficando a critério do candidato, se quiser e estiver apto a melhorar o desafio de alguma forma, com os conhecimentos adquiridos durante a trilha de especialização.
 
+
+# Desafio Cadastro Pessoal - Gama Academy
+
+Projeto desenvolvido como parte do desafio de **Atração** da Gama Academy.
+
+## 🎯 Objetivo
+Criar um formulário para registrar dados pessoais com validações e estilização básica.
+
+## 🛠️ Tecnologias
+- HTML5
+- CSS3
+- JavaScript
+
+## 📋 Funcionalidades
+- Campos obrigatórios: Nome, CPF, Endereço, Número, Telefone Celular
+- Validação simples com `required`
+- Select para campo Sexo (M/F)
+- Alert ao submeter formulário
+- Estilização básica com CSS
+
+## 🚀 Deploy
+- [Demo no GitHub Pages](https://apduartte.github.io/cadastro-pessoal)
+- [Demo no Netlify](https://cadastro-pessoal.netlify.app)
+
+## 👩‍💻 Autora
+[Ana Paula Duarte](https://github.com/apduartte)
