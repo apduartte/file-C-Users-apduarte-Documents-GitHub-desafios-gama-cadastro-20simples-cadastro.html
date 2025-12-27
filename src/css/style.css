@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+/* Estilo geral do corpo */
+body {
+  background-color: whitesmoke;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  padding-top: 80px; /* compensação da altura do cabeçalho fixo */
+}
+
+/* Cabeçalho fixo no topo */
+.cabecalho {
+  width: 100%;
+  background-color: #ec7000;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  text-align: center;
+  padding: 20px;
+  font-size: 16pt;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Conteúdo principal */
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}

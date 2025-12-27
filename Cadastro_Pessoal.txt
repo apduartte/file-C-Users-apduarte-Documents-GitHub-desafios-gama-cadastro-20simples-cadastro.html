@@ -1,0 +1,20 @@
+# 📋 Cadastro Pessoal
+
+## 📌 Descrição
+Aplicação simples de cadastro de usuários desenvolvida com **HTML, CSS, JavaScript e PHP**.  
+O objetivo é demonstrar boas práticas de organização de código, integração entre front-end e back-end e uso de formulários para coleta de dados.
+
+## 🚀 Tecnologias Utilizadas
+- HTML5
+- CSS3 (arquivos separados para estilo e formulários)
+- JavaScript (validações e interações)
+- PHP (processamento de dados)
+- Git & GitHub (versionamento e portfólio)
+
+## ⚙️ Funcionalidades
+- Formulário de cadastro com campos básicos (nome, e-mail, etc.)
+- Validação simples no front-end com JavaScript
+- Envio de dados para processamento em PHP
+- Estrutura organizada em pastas (`src/css`, `src/js`, `src/php`)
+
+## 📂 Estrutura do Projeto
