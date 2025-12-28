@@ -3,7 +3,7 @@ name: Deploy
 on:
   push:
     branches:
-      - main
+      - master
 
 permissions:
   contents: read
@@ -23,7 +23,7 @@ jobs:
       - name: Upload site
         uses: actions/upload-pages-artifact@v2
         with:
-          path: .  # ou "src" se os arquivos estiverem lá
+          path: .  # mantém a raiz; publica index.html e a pasta src/
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
