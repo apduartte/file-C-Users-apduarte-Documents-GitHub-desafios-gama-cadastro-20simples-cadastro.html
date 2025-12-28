@@ -1,0 +1,32 @@
+# Ignorar arquivos do Visual Studio
+.vs/
+*.sln
+*.suo
+*.user
+*.userosscache
+*.sdf
+*.dbmdl
+*.log
+*.sqlite
+*.pdb
+*.obj
+*.exe
+*.dll
+*.bak
+*.tmp
+*.VC.db
+*.VC.opendb
+
+# Pastas de build
+bin/
+obj/
+Debug/
+Release/
+
+# IDEs e editores
+.idea/
+.vscode/
+
+# Sistema operacional
+Thumbs.db
+.DS_Store
