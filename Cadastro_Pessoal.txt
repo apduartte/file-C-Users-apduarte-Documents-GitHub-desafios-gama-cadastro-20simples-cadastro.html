@@ -1,20 +1,158 @@
-# 📋 Cadastro Pessoal
+# 📋 Desafio Cadastro Pessoal
 
-## 📌 Descrição
-Aplicação simples de cadastro de usuários desenvolvida com **HTML, CSS, JavaScript e PHP**.  
-O objetivo é demonstrar boas práticas de organização de código, integração entre front-end e back-end e uso de formulários para coleta de dados.
+Este projeto foi desenvolvido como parte da **Formação Tech - Gama Academy**.  
+O objetivo é criar um **formulário de cadastro pessoal** que salva os dados em um arquivo CSV e gera um relatório consultável.
 
-## 🚀 Tecnologias Utilizadas
-- HTML5
-- CSS3 (arquivos separados para estilo e formulários)
-- JavaScript (validações e interações)
-- PHP (processamento de dados)
-- Git & GitHub (versionamento e portfólio)
+---
 
-## ⚙️ Funcionalidades
-- Formulário de cadastro com campos básicos (nome, e-mail, etc.)
-- Validação simples no front-end com JavaScript
-- Envio de dados para processamento em PHP
-- Estrutura organizada em pastas (`src/css`, `src/js`, `src/php`)
+## 🚀 Funcionalidades
 
-## 📂 Estrutura do Projeto
+- Formulário completo com campos de:
+  - Nome, CPF, RG
+  - Sexo
+  - Endereço (logradouro, número, bairro, cidade, estado, CEP)
+  - Telefones (fixo e celular)
+- Validações de campos com HTML5
+- Máscaras automáticas para:
+  - **CPF** → `111.111.111-11`
+  - **Telefone fixo** → `(11)1111-1111`
+  - **Telefone celular** → `(11)9111-1111`
+  - **CEP** → `99999-999`
+- Envio dos dados via **AJAX (fetch API)** sem recarregar a página
+- Backend em **PHP** que grava os cadastros em `cadastros.csv`
+- Relatório em tabela (`relatorio.php`) com todos os cadastros
+
+---
+
+## 🛠️ Tecnologias utilizadas
+
+- **HTML5** → estrutura do formulário
+- **CSS3** → estilização
+- **JavaScript** → máscaras e envio via AJAX
+- **PHP** → persistência dos dados e geração de relatório
+- **GitHub Actions** → automação de deploy
+- **Git** → versionamento
+
+---
+
+## 📂 Estrutura do projeto
+📦 desafio-cadastro-pessoal ┣ 📂 css ┃ ┣ 📜 style.css ┃ ┗ 📜 form.css ┣ 📜 index.html ┣ 📜 enviar.php ┣ 📜 relatorio.php ┗ 📜 cadastros.csv (gerado automaticamente
+
+---
+
+## ▶️ Como rodar o projeto
+
+### 1. Clonar o repositório
+```bash
+git clone https://github.com/seu-usuario/desafio-cadastro-pessoal.git
+cd desafio-cadastro-pessoal
+
+2. Configurar servidor local
+Este projeto usa PHP, então você precisa de um servidor local:
+- XAMPP
+- WampServer
+- Laragon
+Coloque os arquivos na pasta htdocs (ou equivalente).
+
+3. Acessar no navegador
+- Formulário: http://localhost/desafio-cadastro-pessoal/index.html
+- Relatório: http://localhost/desafio-cadastro-pessoal/relatorio.php
+
+
+📊 Exemplo de uso
+- Preencha o formulário com seus dados.
+- Clique em Enviar Formulário.
+- Veja a mensagem de sucesso.
+- Consulte o relatório em relatorio.php.
+
+💡 Aprendizados
+- Uso de máscaras dinâmicas em inputs com JavaScript.
+- Integração frontend + backend com AJAX e PHP.
+- Persistência simples em CSV.
+- Configuração de GitHub Actions para deploy.
+- Resolução de erros comuns em Git e workflows
+
+Perfeito, Ana! Aqui está um modelo de README.md estilizado que você pode colocar no seu repositório GitHub. Ele explica o desafio, mostra como rodar o projeto e valoriza suas habilidades.
+
+# 📋 Desafio Cadastro Pessoal
+
+Este projeto foi desenvolvido como parte da **Formação Tech - Gama Academy**.  
+O objetivo é criar um **formulário de cadastro pessoal** que salva os dados em um arquivo CSV e gera um relatório consultável.
+
+---
+
+## 🚀 Funcionalidades
+
+- Formulário completo com campos de:
+  - Nome, CPF, RG
+  - Sexo
+  - Endereço (logradouro, número, bairro, cidade, estado, CEP)
+  - Telefones (fixo e celular)
+- Validações de campos com HTML5
+- Máscaras automáticas para:
+  - **CPF** → `111.111.111-11`
+  - **Telefone fixo** → `(11)2613-5348`
+  - **Telefone celular** → `(11)97016-4186`
+  - **CEP** → `99999-999`
+- Envio dos dados via **AJAX (fetch API)** sem recarregar a página
+- Backend em **PHP** que grava os cadastros em `cadastros.csv`
+- Relatório em tabela (`relatorio.php`) com todos os cadastros
+
+---
+
+## 🛠️ Tecnologias utilizadas
+
+- **HTML5** → estrutura do formulário
+- **CSS3** → estilização
+- **JavaScript** → máscaras e envio via AJAX
+- **PHP** → persistência dos dados e geração de relatório
+- **GitHub Actions** → automação de deploy
+- **Git** → versionamento
+
+---
+
+## 📂 Estrutura do projeto
+
+
+📦 desafio-cadastro-pessoal ┣ 📂 css ┃ ┣ 📜 style.css ┃ ┗ 📜 form.css ┣ 📜 index.html ┣ 📜 enviar.php ┣ 📜 relatorio.php ┗ 📜 cadastros.csv (gerado automaticamente)
+
+---
+
+## ▶️ Como rodar o projeto
+
+### 1. Clonar o repositório
+```bash
+git clone https://github.com/seu-usuario/desafio-cadastro-pessoal.git
+cd desafio-cadastro-pessoal
+
+
+2. Configurar servidor local
+Este projeto usa PHP, então você precisa de um servidor local:
+- XAMPP
+- WampServer
+- Laragon
+Coloque os arquivos na pasta htdocs (ou equivalente).
+3. Acessar no navegador
+- Formulário: http://localhost/desafio-cadastro-pessoal/index.html
+- Relatório: http://localhost/desafio-cadastro-pessoal/relatorio.php
+
+📊 Exemplo de uso
+- Preencha o formulário com seus dados.
+- Clique em Enviar Formulário.
+- Veja a mensagem de sucesso.
+- Consulte o relatório em relatorio.php.
+
+💡 Aprendizados
+- Uso de máscaras dinâmicas em inputs com JavaScript.
+- Integração frontend + backend com AJAX e PHP.
+- Persistência simples em CSV.
+- Configuração de GitHub Actions para deploy.
+- Resolução de erros comuns em Git e workflows.
+
+👩‍💻 Autor
+Ana Duarte
+Formação Tech - Gama Academy
+LinkedIn: https://www.linkedin.com/in/ana-paula-l-duarte| GitHub: https://www.apduartte.com.br/desafio-cadastro-pessoal/
+
+
+
