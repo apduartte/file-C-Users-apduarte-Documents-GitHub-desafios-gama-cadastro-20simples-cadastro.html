@@ -81,30 +81,47 @@
     </form>
   </main>
 
+<!-- ... seu formulário e conteúdo ... -->
+
+<div id="feedback" aria-live="polite"></div>
+
 <script>
-  // Pergunta o nome do usuário
   const nomePrompt = window.prompt('Qual é o seu nome?');
   if (nomePrompt && nomePrompt.trim() !== "") {
     window.alert('É uma alegria te conhecer, ' + nomePrompt);
   }
 
-  // Captura o formulário
   const form = document.getElementById('cadastro-pessoal');
+  const feedback = document.getElementById('feedback');
 
-  // Adiciona evento de envio
-  form.addEventListener('submit', function (e) {
-    e.preventDefault(); // evita envio automático
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
 
-    // Verifica se os campos são válidos
-    if (!form.reportValidity()) {
-      return;
+    if (!form.reportValidity()) return;
+
+    feedback.textContent = 'Enviando...';
+
+    try {
+      const formData = new FormData(form);
+
+      const resp = await fetch('enviar.php', {
+        method: 'POST',
+        body: formData
+      });
+
+      const data = await resp.json().catch(() => ({ ok: false, message: 'Erro na resposta do servidor.' }));
+
+      if (!resp.ok || !data.ok) {
+        throw new Error(data.message || 'Falha ao salvar cadastro.');
+      }
+
+      feedback.textContent = data.message || 'Cadastro salvo com sucesso!';
+      form.reset();
+
+    } catch (err) {
+      feedback.textContent = 'Erro: ' + err.message;
     }
-
-    // Exibe mensagem de sucesso
-    window.alert('Cadastro realizado com sucesso!');
-    
-    // Aqui você pode enviar os dados para o servidor:
-    form.submit();
   });
 </script>
 </body>
+</html>
