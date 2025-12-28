@@ -1,28 +1,42 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $nome = $_POST["nome"];
-  $cpf = $_POST["cpf"];
-  $rg = $_POST["rg"];
-  $sexo = $_POST["sexo"];
-  $logradouro = $_POST["logradouro"];
-  $numero = $_POST["numero"];
-  $bairro = $_POST["bairro"];
-  $cidade = $_POST["cidade"];
-  $estado = $_POST["estado"];
-  $cep = $_POST["cep"];
-  $telFixo = $_POST["telFixo"];
-  $telCelular = $_POST["telCelular"];
+header('Content-Type: application/json; charset=UTF-8');
 
-  $para = "seuemail@exemplo.com";
-  $assunto = "Novo cadastro recebido";
-  $mensagem = "Nome: $nome\nCPF: $cpf\nRG: $rg\nSexo: $sexo\nEndereço: $logradouro, $numero, $bairro, $cidade - $estado\nCEP: $cep\nTelefone Fixo: $telFixo\nTelefone Celular: $telCelular";
-
-  $headers = "From: apduartte@gmail.com";
-
-  if (mail($para, $assunto, $mensagem, $headers)) {
-    echo "Cadastro enviado com sucesso!";
-  } else {
-    echo "Erro ao enviar o cadastro.";
-  }
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+  http_response_code(405);
+  echo json_encode(['ok' => false, 'message' => 'Método não permitido']);
+  exit;
 }
-?>
+
+function clean($key) {
+  return trim(filter_input(INPUT_POST, $key, FILTER_SANITIZE_FULL_SPECIAL_CHARS) ?? '');
+}
+
+$dados = [
+  'data_hora'  => date('Y-m-d H:i:s'),
+  'nome'       => clean('nome'),
+  'cpf'        => clean('cpf'),
+  'rg'         => clean('rg'),
+  'sexo'       => clean('sexo'),
+  'logradouro' => clean('logradouro'),
+  'numero'     => clean('numero'),
+  'bairro'     => clean('bairro'),
+  'cidade'     => clean('cidade'),
+  'estado'     => clean('estado'),
+  'cep'        => clean('cep'),
+  'telFixo'    => clean('telFixo'),
+  'telCelular' => clean('telCelular')
+];
+
+$arquivo = 'cadastros.csv';
+if (!file_exists($arquivo)) {
+  $cabecalho = array_keys($dados);
+  $fp = fopen($arquivo, 'w');
+  fputcsv($fp, $cabecalho, ';');
+  fclose($fp);
+}
+
+$fp = fopen($arquivo, 'a');
+fputcsv($fp, array_values($dados), ';');
+fclose($fp);
+
+echo json_encode(['ok' => true, 'message' => 'Cadastro salvo com sucesso!']);
