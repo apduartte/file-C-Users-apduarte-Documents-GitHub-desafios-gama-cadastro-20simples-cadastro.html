@@ -81,19 +81,30 @@
     </form>
   </main>
 
-  <script>
-    const nomePrompt = window.prompt('Qual é o seu nome?');
-    if (nomePrompt) {
-      window.alert('É uma alegria te conhecer, ' + nomePrompt);
+<script>
+  // Pergunta o nome do usuário
+  const nomePrompt = window.prompt('Qual é o seu nome?');
+  if (nomePrompt && nomePrompt.trim() !== "") {
+    window.alert('É uma alegria te conhecer, ' + nomePrompt);
+  }
+
+  // Captura o formulário
+  const form = document.getElementById('cadastro-pessoal');
+
+  // Adiciona evento de envio
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); // evita envio automático
+
+    // Verifica se os campos são válidos
+    if (!form.reportValidity()) {
+      return;
     }
 
-    const form = document.getElementById('cadastro-pessoal');
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      if (!form.reportValidity()) return;
-      window.alert('Cadastro realizado com sucesso!');
-    });
-  </script>
+    // Exibe mensagem de sucesso
+    window.alert('Cadastro realizado com sucesso!');
+    
+    // Aqui você pode enviar os dados para o servidor:
+    form.submit();
+  });
+</script>
 </body>
-
-</html>
