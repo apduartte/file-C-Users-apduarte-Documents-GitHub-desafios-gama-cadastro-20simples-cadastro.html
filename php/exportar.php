@@ -50,12 +50,6 @@ function matchRow($row, $busca) {
     <a href="relatorio.php">Limpar</a>
   </form>
 
-  <!-- Botão de exportação -->
-  <form method="get" action="exportar.php">
-    <input type="hidden" name="q" value="<?php echo htmlspecialchars($busca); ?>">
-    <button type="submit">Exportar resultados em CSV</button>
-  </form>
-
   <?php if (count($linhas) === 0): ?>
     <p>Nenhum cadastro encontrado.</p>
   <?php else: ?>
