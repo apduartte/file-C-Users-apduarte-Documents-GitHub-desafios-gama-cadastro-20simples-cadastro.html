@@ -1,42 +1,58 @@
 <?php
+// Mostrar erros em dev (remova em produção)
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+// Sempre responder JSON
 header('Content-Type: application/json; charset=UTF-8');
 
+// Aceitar somente POST
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-  http_response_code(405);
-  echo json_encode(['ok' => false, 'message' => 'Método não permitido']);
+  echo json_encode(['ok' => false, 'message' => 'Método não permitido.']);
   exit;
 }
 
-function clean($key) {
-  return trim(filter_input(INPUT_POST, $key, FILTER_SANITIZE_FULL_SPECIAL_CHARS) ?? '');
-}
-
-$dados = [
-  'data_hora'  => date('Y-m-d H:i:s'),
-  'nome'       => clean('nome'),
-  'cpf'        => clean('cpf'),
-  'rg'         => clean('rg'),
-  'sexo'       => clean('sexo'),
-  'logradouro' => clean('logradouro'),
-  'numero'     => clean('numero'),
-  'bairro'     => clean('bairro'),
-  'cidade'     => clean('cidade'),
-  'estado'     => clean('estado'),
-  'cep'        => clean('cep'),
-  'telFixo'    => clean('telFixo'),
-  'telCelular' => clean('telCelular')
+// Coletar campos
+$campos = [
+  'nome'       => $_POST['nome'] ?? '',
+  'cpf'        => $_POST['cpf'] ?? '',
+  'rg'         => $_POST['rg'] ?? '',
+  'sexo'       => $_POST['sexo'] ?? '',
+  'logradouro' => $_POST['logradouro'] ?? '',
+  'numero'     => $_POST['numero'] ?? '',
+  'bairro'     => $_POST['bairro'] ?? '',
+  'cidade'     => $_POST['cidade'] ?? '',
+  'estado'     => $_POST['estado'] ?? '',
+  'cep'        => $_POST['cep'] ?? '',
+  'telFixo'    => $_POST['telFixo'] ?? '',
+  'telCelular' => $_POST['telCelular'] ?? '',
+  'dataHora'   => date('Y-m-d H:i:s')
 ];
 
-$arquivo = 'cadastros.csv';
-if (!file_exists($arquivo)) {
-  $cabecalho = array_keys($dados);
-  $fp = fopen($arquivo, 'w');
-  fputcsv($fp, $cabecalho, ';');
+// Caminho do CSV (ajuste conforme sua estrutura)
+$arquivo = __DIR__ . '/../cadastros.csv';
+$novoArquivo = !file_exists($arquivo);
+
+try {
+  $fp = fopen($arquivo, 'a');
+  if (!$fp) {
+    throw new Exception('Não foi possível abrir o arquivo de cadastros.');
+  }
+
+  // Cabeçalho na primeira vez
+  if ($novoArquivo) {
+    fputcsv($fp, array_keys($campos), ';');
+  }
+
+  // Linha de dados
+  fputcsv($fp, array_values($campos), ';');
   fclose($fp);
+
+  echo json_encode(['ok' => true, 'message' => 'Cadastro salvo com sucesso!']);
+  exit;
+
+} catch (Exception $e) {
+  echo json_encode(['ok' => false, 'message' => $e->getMessage()]);
+  exit;
 }
-
-$fp = fopen($arquivo, 'a');
-fputcsv($fp, array_values($dados), ';');
-fclose($fp);
-
-echo json_encode(['ok' => true, 'message' => 'Cadastro salvo com sucesso!']);

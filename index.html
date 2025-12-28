@@ -193,5 +193,45 @@
     }
   });
 </script>
+<script>
+  const form = document.getElementById('cadastro-pessoal');
+  const feedback = document.getElementById('feedback');
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    if (!form.reportValidity()) return;
+
+    feedback.textContent = 'Enviando...';
+
+    try {
+      const formData = new FormData(form);
+
+      const resp = await fetch('php/enviar.php', { // ajuste o caminho
+        method: 'POST',
+        body: formData
+      });
+
+      // Garante parse de JSON e trata erro de parse
+      let data;
+      try {
+        data = await resp.json();
+      } catch {
+        throw new Error('Resposta do servidor não é JSON válido.');
+      }
+
+      if (!resp.ok || !data.ok) {
+        throw new Error(data?.message || 'Falha ao salvar cadastro.');
+      }
+
+      feedback.textContent = data.message || 'Cadastro salvo com sucesso!';
+      form.reset();
+
+    } catch (err) {
+      feedback.textContent = 'Erro: ' + err.message;
+    }
+  });
+</script>
+
 </body>
 </html>
