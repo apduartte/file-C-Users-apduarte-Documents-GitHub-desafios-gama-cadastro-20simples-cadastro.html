@@ -1,4 +1,4 @@
-# Ignorar arquivos do Visual Studio
+# Visual Studio
 .vs/
 *.sln
 *.suo
