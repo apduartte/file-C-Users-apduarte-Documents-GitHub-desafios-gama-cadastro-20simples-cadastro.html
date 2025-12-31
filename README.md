@@ -7,63 +7,27 @@
 ![PHP](https://img.shields.io/badge/PHP-8-purple?logo=php)
 ![Deploy](https://img.shields.io/badge/deploy-GitHub%20Pages-blue?logo=github)
 
-Este repositório contém o projeto desenvolvido como parte do desafio do **Processo Seletivo da Formação Tech da Gama Academy**, realizado dentro de um programa inclusivo para pessoas com deficiência (PcD).  
-O objetivo foi simular um sistema real de cadastro de usuários, aplicando **validações de formulário, estilização com CSS e deploy público**.
-
----
-
-## 📌 Documentação
-- 📄 [Desafio Proposto](./DESAFIO.md)  
-- 🚀 [Solução Implementada](./SOLUCAO.md)  
-
----
-
-## 🎯 Contexto Inclusivo
-Este desafio integrou o programa de **formação de talentos PcD**, reforçando o compromisso da Gama Academy e de empresas parceiras em promover **diversidade, acessibilidade e inclusão** no mercado de tecnologia.  
-
-O processo seletivo contou com **400 candidatos disputando apenas 20 vagas**, e tive a honra de estar entre os **selecionados**, demonstrando não apenas competência técnica, mas também **resiliência, dedicação e potencial de crescimento** em ambientes inclusivos e desafiadores.
-
----
-
-## 🚀 Deploy
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-online-blue?logo=github)](https://apduartte.github.io/cadastro-pessoal)  
-[![Netlify](https://img.shields.io/badge/Netlify-versão%20anterior-lightgrey?logo=netlify)](https://cadastro-pessoal.netlify.app)  
-
-> 🔄 Este projeto foi inicialmente publicado no **Netlify** há 4 anos, como minha primeira experiência com HTML.  
-> Desde então, evoluí e mantive a versão mais atualizada no **GitHub Pages**, refletindo melhorias e aprendizado contínuo.
-
----
-
-## 👩‍💻 Autora
-[Ana Paula Duarte](https://github.com/apduartte)
-
----
-
-## 💡 Diferencial
-Este projeto marca minha **primeira experiência com HTML**, desenvolvida em um contexto de **processo seletivo inclusivo para PcD**, demonstrando não apenas habilidades técnicas, mas também **capacidade de aprendizado rápido, superação de desafios e contribuição para ambientes diversos e acessíveis**.
 # 📝 Cadastro Pessoal
 
-Projeto desenvolvido como parte de um desafio técnico de desenvolvimento web. O objetivo é criar um formulário completo de cadastro pessoal com validação de dados e armazenamento simples.
+Projeto desenvolvido como desafio técnico para criação de um formulário de cadastro com validação e armazenamento simples.
 
 ## 🚀 Tecnologias Utilizadas
-
-- **Front-end:** HTML5, CSS3, JavaScript  
-- **Back-end:** PHP  
-- **Controle de versão:** Git & GitHub  
+- HTML5
+- CSS3
+- JavaScript
+- PHP
+- Git & GitHub
 
 ## 🎯 Funcionalidades
-
-- Formulário de cadastro com campos obrigatórios e opcionais
+- Cadastro de dados pessoais com campos obrigatórios
 - Validação de CPF e telefone celular
 - Layout centralizado e responsivo
-- Armazenamento dos dados em arquivo `.txt` via PHP
+- Armazenamento em arquivo `.txt` via PHP
 
 ## 📸 Demonstração
-
 > (Adicione aqui uma captura de tela do formulário funcionando)
 
 ## 🛠️ Como Executar
-
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/apduarte/desafio.git
+   git clone https://github.com/apduarte/cadastro-pessoal.git
