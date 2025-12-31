@@ -1,4 +1,4 @@
-# 🧾 Desafio Cadastro Pessoal — Gama Academy
+# 🧾 Desafio Cadastro Pessoal — Bootcamp Banco Itaú
 
 ![Status](https://img.shields.io/badge/status-completo-brightgreen)
 ![HTML](https://img.shields.io/badge/HTML-5-orange?logo=html5)
@@ -41,3 +41,29 @@ O processo seletivo contou com **400 candidatos disputando apenas 20 vagas**, e 
 
 ## 💡 Diferencial
 Este projeto marca minha **primeira experiência com HTML**, desenvolvida em um contexto de **processo seletivo inclusivo para PcD**, demonstrando não apenas habilidades técnicas, mas também **capacidade de aprendizado rápido, superação de desafios e contribuição para ambientes diversos e acessíveis**.
+# 📝 Cadastro Pessoal
+
+Projeto desenvolvido como parte de um desafio técnico de desenvolvimento web. O objetivo é criar um formulário completo de cadastro pessoal com validação de dados e armazenamento simples.
+
+## 🚀 Tecnologias Utilizadas
+
+- **Front-end:** HTML5, CSS3, JavaScript  
+- **Back-end:** PHP  
+- **Controle de versão:** Git & GitHub  
+
+## 🎯 Funcionalidades
+
+- Formulário de cadastro com campos obrigatórios e opcionais
+- Validação de CPF e telefone celular
+- Layout centralizado e responsivo
+- Armazenamento dos dados em arquivo `.txt` via PHP
+
+## 📸 Demonstração
+
+> (Adicione aqui uma captura de tela do formulário funcionando)
+
+## 🛠️ Como Executar
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/apduarte/desafio.git

@@ -1,80 +1,17 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  padding: 20px;
-}
-
-.formulario {
-  max-width: 700px;
-  margin: auto;
-  background: #fff;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.campo {
   display: flex;
-  flex-direction: column;
-  margin-bottom: 15px;
-}
-
-.campo label {
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.campo input[type="text"],
-.campo input[type="tel"] {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.campo-duplo {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 15px;
-}
-
-.campo-duplo .campo {
-  flex: 1;
-}
-
-.sexo-opcoes {
-  display: flex;
-  gap: 20px;
-  margin-top: 5px;
-}
-
-.sexo-opcoes label {
-  display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 5px;
+  height: 100vh; /* altura total da tela */
+  margin: 0;
+  background-color: #f2f2f2; /* cor de fundo suave */
 }
 
-button {
+form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
   width: 100%;
-  padding: 12px;
-  background-color: #0077cc;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #005fa3;
-}
-
-@media (max-width: 600px) {
-  .campo-duplo {
-    flex-direction: column;
-  }
+  max-width: 500px;
 }
