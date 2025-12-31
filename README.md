@@ -7,8 +7,8 @@
 ![PHP](https://img.shields.io/badge/PHP-8-purple?logo=php)
 ![Deploy](https://img.shields.io/badge/deploy-GitHub%20Pages-blue?logo=github)
 
-Este repositório contém o projeto desenvolvido como parte do desafio de **Atração** da Formação Tech da Gama Academy.  
-O objetivo foi simular um sistema real de cadastro de usuários, aplicando validações, estilização e deploy público.
+Este repositório contém o projeto desenvolvido como parte do desafio do **Processo Seletivo da Formação Tech da Gama Academy**, realizado dentro de um programa inclusivo para pessoas com deficiência (PcD).  
+O objetivo foi simular um sistema real de cadastro de usuários, aplicando **validações de formulário, estilização com CSS e deploy público**.
 
 ---
 
@@ -18,25 +18,14 @@ O objetivo foi simular um sistema real de cadastro de usuários, aplicando valid
 
 ---
 
-## 🎯 Resumo
-- **Primeiro contato com HTML**: aprendizado rápido e aplicação prática.  
-- **Validações**: campos obrigatórios, máscaras para CPF/CEP/telefones.  
-- **Integração**: frontend (HTML/CSS/JS) + backend (PHP).  
-- **Deploy**: GitHub Pages e Netlify, com 24 versões publicadas.  
+## 🎯 Contexto Inclusivo
+Este desafio integrou o programa de **formação de talentos PcD**, reforçando o compromisso da Gama Academy e de empresas parceiras em promover **diversidade, acessibilidade e inclusão** no mercado de tecnologia.  
 
----
-
-## 🛠️ Tecnologias
-- HTML5  
-- CSS3  
-- JavaScript  
-- PHP  
-- GitHub Pages / Netlify  
+O processo seletivo contou com **400 candidatos disputando apenas 20 vagas**, e tive a honra de estar entre os **selecionados**, demonstrando não apenas competência técnica, mas também **resiliência, dedicação e potencial de crescimento** em ambientes inclusivos e desafiadores.
 
 ---
 
 ## 🚀 Deploy
-
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-online-blue?logo=github)](https://apduartte.github.io/cadastro-pessoal)  
 [![Netlify](https://img.shields.io/badge/Netlify-versão%20anterior-lightgrey?logo=netlify)](https://cadastro-pessoal.netlify.app)  
 
@@ -51,5 +40,4 @@ O objetivo foi simular um sistema real de cadastro de usuários, aplicando valid
 ---
 
 ## 💡 Diferencial
-Este projeto marca minha **primeira experiência com HTML**, demonstrando capacidade de aprendizado rápido, resiliência e aplicação prática de novos conhecimentos.  
-Além de cumprir os requisitos técnicos, mostra **potencial de crescimento e adaptação em ambientes corporativos ágeis**.
+Este projeto marca minha **primeira experiência com HTML**, desenvolvida em um contexto de **processo seletivo inclusivo para PcD**, demonstrando não apenas habilidades técnicas, mas também **capacidade de aprendizado rápido, superação de desafios e contribuição para ambientes diversos e acessíveis**.
